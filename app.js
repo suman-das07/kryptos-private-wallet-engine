@@ -149,7 +149,7 @@ const wallet = {
   },
 
   renderUi: function (balanceText) {
-    balanceText.textContent = `${this.totalAmount()}`;
+    balanceText.textContent =`${new Intl.NumberFormat("en", { notation: "compact" }).format(totalAmount()}`;
 
     if (this.totalAmount() <= 500) {
       balanceText.style.color = "rgb(201, 14, 14)";
