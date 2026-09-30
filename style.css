@@ -261,6 +261,7 @@ form>select {
   .transaction-history h2 {
     margin-left: 0;
     font-size: 1.25rem;
+    text-align: center;
   }
 
   .transaction-list {
