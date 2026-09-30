@@ -54,6 +54,16 @@ let userTitle = document.querySelector("#title");
 let transactionType = document.querySelector("#transactionType");
 let form = document.querySelector("form");
 
+transactionType.addEventListener("change", function () {
+  if (transactionType.value === "expense") {
+    btn.value = "Withdraw Amount";
+  }
+  else {
+    btn.value = "Add Deposit";
+  }
+})
+
+
 function day() {
   const now = new Date();
 
@@ -112,6 +122,8 @@ const wallet = {
       console.log("Amount added successfully");
 
       form.reset();
+
+      btn.value="Add Deposit";
 
       this.saveTransactions();
       console.log("data stored to local storage successfully.");
