@@ -1,0 +1,306 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(15, 15, 15);
+}
+
+.heading {
+  color: rgb(180, 180, 180);
+}
+
+.sub-heading {
+  color: rgb(153, 152, 152);
+}
+
+.wallet-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.wallet-container>form {
+  padding-right: 10vw;
+}
+
+form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.5vh;
+  flex-wrap: wrap;
+}
+
+form>p {
+  color: rgb(190, 190, 190);
+  font-family: "Space Mono", monospace;
+  font-size: 1.2vw;
+}
+
+form>input {
+  padding: 2.5vh 8vw;
+  width: 100%;
+  font-family: "Space Mono", monospace;
+  font-size: 1.1vw;
+  background-color: #cacaca;
+  border: none;
+  border-radius: 5px;
+}
+
+form>:placeholder-shown {
+  width: 100%;
+  text-align: left;
+  font-family: "Space Mono", monospace;
+  font-size: 1.1vw;
+}
+
+form>select {
+  padding: 2vh 8.3vw;
+  font-family: "Space Mono", monospace;
+  font-size: 1vw;
+  background-color: rgb(209, 209, 208);
+  border-radius: 5px;
+  margin-top: 1.5vh;
+}
+
+#submit {
+  background-color: rgb(68, 252, 68);
+  margin-top: 3vh;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: linear 0.2s;
+}
+
+#submit:hover {
+  background-color: rgb(151, 255, 119);
+  transform: translateY(-4px);
+}
+
+.balance-heading {
+  color: rgb(148, 148, 148);
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-size: 2vw;
+  padding: 0vh 8vw;
+  margin-top: 10vh;
+}
+
+.balance-Text {
+  color: rgb(154, 247, 33);
+  font-family: "Space Mono", monospace;
+  font-weight: 600;
+  font-size: 6vw;
+  padding: 0vh 8vw;
+  margin-bottom: 1vh;
+}
+
+.transaction-history {
+  width: 90%;
+  margin: 5vh auto;
+}
+
+.transaction-history h2 {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  margin-bottom: 2vh;
+  color: rgb(179, 179, 179);
+  margin-left: 5vw;
+}
+
+.transaction-card {
+  width: 20%;
+  max-width: 500px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+
+  border: .5px solid #5a5a5a;
+  border-radius: 16px;
+
+  background: #fcfbfb00;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+  font-family: "Space Mono", monospace;
+  box-sizing: border-box;
+}
+
+.transaction-title {
+  margin: 0;
+  font-size: 1.4rem;
+  color: rgb(201, 201, 201);
+  text-transform: capitalize;
+}
+
+.transaction-amount {
+  margin: 0.5rem 0 1rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: greenyellow;
+}
+
+.transaction-type,
+.transaction-date {
+  font-size: 1rem;
+  color: #a7a4a4;
+  text-transform: capitalize;
+}
+
+.transaction-date {
+  margin-left: 1rem;
+}
+
+.transaction-list {
+  width: 100%;
+  height: 28vh;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding: 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4vw;
+  margin-bottom: 10vh;
+  /* background-color: red; */
+
+}
+
+.footer {
+  color: #cacaca;
+  text-align: center;
+  font-family: "Space Mono", monospace;
+  font-size: 1.05rem;
+  font-weight: 300;
+  margin-bottom: 2vh;
+}
+
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  .heading {
+    font-size: 1.75rem !important;
+    padding: 0.5rem 0 !important;
+  }
+
+  .sub-heading {
+    font-size: 1rem !important;
+    padding: 0 0 1rem 0 !important;
+    margin-top: 0 !important;
+  }
+
+  .wallet-container {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+  }
+
+  .wallet-container>form {
+    padding-right: 0;
+    width: 100%;
+  }
+
+  form {
+    margin-top: 3vh;
+    gap: 1rem;
+  }
+
+  form>p {
+    font-size: 1rem;
+  }
+
+  form>input {
+    font-size: 1.1rem;
+  }
+
+  form>:placeholder-shown {
+    font-size: 1rem;
+  }
+
+  form>select {
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+  }
+
+  form>select {
+    margin-top: 0.5rem;
+  }
+
+  #submit {
+    margin-top: 1rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .balance-heading {
+    font-size: 1.25rem;
+    padding: 0;
+    margin-top: 1vh;
+  }
+
+  .balance-Text {
+    font-size: 3rem;
+    text-align: center;
+    padding: 0;
+  }
+
+  .transaction-history {
+    width: 100%;
+    margin: 2rem 0;
+  }
+
+  .transaction-history h2 {
+    margin-left: 0;
+    font-size: 1.25rem;
+  }
+
+  .transaction-list {
+    .transaction-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      height: 450px;
+      max-height: 50vh;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 0.5rem;
+    }
+  }
+
+  .transaction-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .transaction-title {
+    font-size: 1.1rem;
+  }
+
+  .transaction-amount {
+    font-size: 1.3rem;
+  }
+
+  .transaction-type,
+  .transaction-date {
+    font-size: 0.85rem;
+  }
+
+    .footer {
+      color: #cacaca;
+      text-align: center;
+      font-family: "Space Mono", monospace;
+      font-size: .6rem;
+      font-weight: 300;
+      margin-bottom: 2vh;
+    }
+}
