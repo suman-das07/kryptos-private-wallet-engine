@@ -53,6 +53,7 @@ let userAmount = document.querySelector("#amount");
 let userTitle = document.querySelector("#title");
 let transactionType = document.querySelector("#transactionType");
 let form = document.querySelector("form");
+let btn = document.querySelector("#submit");
 
 transactionType.addEventListener("change", function () {
   if (transactionType.value === "expense") {
